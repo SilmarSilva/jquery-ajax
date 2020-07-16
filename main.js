@@ -13,7 +13,8 @@ function consultaCep(){
             $("#localidade").html(response.localidade);
             $("#uf").html(response.uf);
             $("#titulo_cep").html("CEP " + response.cep);
-
+            $(".cep").hide();
+           // $(".cep").show(); // mostra quando entrar o cep
             /*
             // lembrando que o (#) é usado como seletor para id, enquanto que o (.) é seletor para class
             $("#logradouro").html(response.logradouro); // forma alternativa para retornar os valores
@@ -23,5 +24,7 @@ function consultaCep(){
             document.getElementById("uf").innerHTML = response.uf;*/
         }
     })
-
 }
+$(function(){
+    $(".cep").hide();
+});
